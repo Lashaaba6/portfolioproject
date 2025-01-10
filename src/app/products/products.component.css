@@ -1,0 +1,149 @@
+.productsec{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 40px;
+}
+.search{
+    padding: 40px;
+}
+.search-bar {
+    background: #f8f9fa; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  
+  .btn-primary {
+    background: #007bff;
+    border: none;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #0056b3;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    background-color: #f4f7fc; /* Light blue-gray background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  /* Inputs inside the search bar */
+  .search-bar input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effect on input fields */
+  .search-bar input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+  }
+  
+  /* Search button */
+  .search-bar button {
+    background-color: #28a745; /* Green for search button */
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 24px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Search button hover */
+  .search-bar button:hover {
+    background-color: #218838;
+  }
+  
+  /* Product Section */
+  .productsec {
+    padding-top: 30px;
+    background: linear-gradient(135deg, #e2e8f0, #f7fafc); /* Gradient background */
+    border-radius: 10px;
+    padding-bottom: 50px;
+  }
+  
+  /* Product Cards */
+  .card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Product image */
+  .card-img-top {
+    object-fit: cover;
+    height: 200px;
+  }
+  
+  /* Card Body */
+  .card-body {
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Hover effect on cards */
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card Title */
+  .card-title {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  /* Product price */
+  .card-text {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  
+  /* Add to Cart Button */
+  .btn-warning {
+    background-color: #ff6f00; /* Orange color */
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-warning:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+  }
+  
+  /* Icon inside Add to Cart Button */
+  .btn-warning i {
+    font-size: 1.3rem;
+  }

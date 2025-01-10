@@ -1,0 +1,81 @@
+<div class="container my-4">
+    <div class="search-bar d-flex justify-content-center align-items-center p-4 bg-light shadow rounded">
+      <input
+        class="form-control me-3"
+        type="search"
+        placeholder="Keyword"
+        aria-label="Search"
+        [(ngModel)]="keyword"
+        style="max-width: 200px;"
+      />
+      <input
+        class="form-control me-3"
+        type="number"
+        placeholder="Min Price"
+        aria-label="Min Price"
+        [(ngModel)]="minprice"
+        style="max-width: 150px;"
+      />
+      <input
+        class="form-control me-3"
+        type="number"
+        placeholder="Max Price"
+        aria-label="Max Price"
+        [(ngModel)]="maxprice"
+        style="max-width: 150px;"
+      />
+      <button class="btn btn-success btn-lg px-4" type="submit" (click)="filter()">
+        <i class="fas fa-search me-2"></i>Search
+      </button>
+    </div>
+  </div>
+  
+  <section class="productsec container my-5">
+    <div class="row g-4">
+      <div *ngFor="let product of allproducts" class="col-md-4">
+        <div class="card h-100 shadow border-0">
+          <img
+            [src]="product.images[0]"
+            class="card-img-top"
+            alt="{{ product.title }}"
+            style="height: 200px; object-fit: cover;"
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary fw-bold">{{ product.title }}</h5>
+            <p class="card-text text-muted">
+              <span class="fw-bold">{{ product.price.current }}</span>
+              {{ product.price.currency }}
+            </p>
+            <a
+              class="btn btn-primary btn-sm"
+              [routerLink]="'/details'"
+              [queryParams]="{ id: product._id }"
+            >
+              <i class="fas fa-info-circle me-2"></i>Details
+            </a>
+            <a
+  class="btn btn-warning btn-sm d-flex align-items-center shadow-lg"
+  [routerLink]="'/cart'"
+  [queryParams]="{ id: product._id }"
+  style="gap: 8px; padding: 8px 16px; border-radius: 25px; transition: all 0.3s ease; background-color: #ff6f00; border: none;"
+  (mouseover)="hoverIn($event)"
+  (mouseleave)="hoverOut($event)"
+>
+  <i class="bi bi-cart-plus-fill" style="font-size: 1.3rem;"></i>
+  <span class="fw-bold">Add to Cart</span>
+</a>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+   
+ 

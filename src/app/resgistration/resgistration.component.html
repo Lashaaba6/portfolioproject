@@ -1,0 +1,41 @@
+
+
+<form>
+    <div class="mb-3">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-control" type="email" id="email" name="email" placeholder="username@gmail.com" [(ngModel)]="email"
+        required
+        #emailctrl="ngModel"
+        >
+
+        @if(emailctrl.dirty && emailctrl.invalid){
+            <div class="text-danger">email is required</div>
+        }
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" for="password">password</label>
+        <input class="form-control" type="password" id="password" name="password" placeholder="enter your password" [(ngModel)]="password"
+        required
+        #passwordctrl="ngModel"
+        >
+
+        @if(passwordctrl.dirty && passwordctrl.invalid){
+            <div class="text-danger">password is required</div>
+
+        }
+    </div>
+
+
+    <div class="mb-3">
+        <input class="forms-check-input" type="checkbox" id="signin" name="signin" [(ngModel)]="keepsignin">
+        <label class="form-label" for="">keep me sign in</label>
+    </div>
+
+   <div class="buttons">
+    <button type="button" class="btn btn-success" (click)="onsavebtn()" 
+    [disabled]="emailctrl.invalid || passwordctrl.invalid"
+    >Log in</button>
+    <button type="button" class="btn btn-secondary" routerLink="/signupcomp">Sign up</button>
+   </div>
+</form>

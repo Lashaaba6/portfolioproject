@@ -1,0 +1,78 @@
+<form>
+    <div class="mb-3">
+        <label class="form-label" for="firstname">first name</label>
+        <input class="form-control" 
+        type="text" 
+        name="firstname" 
+        id="firstname" 
+        [formControl]="firstname"
+        placeholder="enter your name"
+        >
+
+        @if(firstname.errors?.['maxlength']){
+         <div class="text-danger">name is too long, maximum length is  {{firstname.errors?.['maxlength'] ['requiredLength']}}</div>
+        }
+
+         @if(firstname.errors?.['required']) {
+            <div class="text-danger">name is required</div>
+         }
+
+    </div>
+
+     <div class="mb-3">
+        <label class="form-label" for="lastname">last name</label>
+        <input class="form-control" type="text" name="lastname" id="lastname"
+         [formControl]="lastname" placeholder="enter your lastname"
+        >
+        @if(lastname.errors?.['maxlength']){
+            <div class="text-danger">lastname is too long, maximum length is  {{firstname.errors?.['maxlength'] ['requiredLength']}}</div>
+           }
+   
+            @if(lastname.errors?.['required']) {
+               <div class="text-danger">lastname is required</div>
+            }
+
+      
+     </div>
+
+     <div class="mb-3">
+        <label class="form-label" for="email">email</label>
+        <input class="form-control" type="text" name="email" id="email"
+        [formControl]="email"
+        placeholder="enter your email"
+        >
+        @if(email.errors?.['required']){
+           <div class="text-danger">email is required</div>
+        }
+        @if(email.errors?.['email']){
+            <div class="text-danger">email must include the symbol</div>
+         }
+        
+    </div>
+
+
+    <div class="mb-3">
+        <label class="form-label" for="password">password</label>
+        <input class="form-control" type="text" name="password" id="password"
+        [formControl]="password"
+        placeholder="enter your password"
+        >
+
+      
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" for="confirmedpassword">confirm password</label>
+        <input class="form-control" type="text" name="confirmedpassword" id="confirmedpassword"
+        [formControl]="confirmedpassword"
+        placeholder="repeat your password"
+        >
+
+        @if(password.value !== confirmedpassword.value){
+        <div class="text-danger">passwords doesn't match</div>
+        }
+    </div>
+
+
+    <button type="button" class="btn btn-outline-success">sign up</button>
+</form>

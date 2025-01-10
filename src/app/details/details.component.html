@@ -1,0 +1,16 @@
+<div class="container my-5">
+    <div class="card cards mx-auto" style="width: 28rem; border-radius: 15px;">
+      <img [src]="singleproduct.images" class="card-img-top" alt="product image" />
+      <div class="card-body text-center">
+        <h5 class="card-title text-light">{{ singleproduct.title }}</h5>
+        <h5 class="card-title">
+          {{ singleproduct.price.current }} {{ singleproduct.price.currency }}
+        </h5>
+        <p class="card-text text-muted">{{ singleproduct.description }}</p>
+        <a  class="btn btn-dark btn-lg shadow-lg mt-3" [routerLink]="'/products'">back to products</a>
+      </div>
+    </div>
+  </div>
+  
+  
+  
